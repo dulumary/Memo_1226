@@ -16,10 +16,19 @@ import lombok.extern.slf4j.Slf4j;
 public class FileManagerService {
 
 	// 실제 업로드 된 이미지가 저장될 경로(서버)
-	public static final String FILE_UPLOAD_PATH = "D:\\신보람\\test_project\\memo\\images/";
+	public static final String FILE_UPLOAD_PATH = "/home/memo/upload/";
 	
 	// input:File 원본, userLoginId(폴더명)  output: 이미지 경로
 	public String saveFile(String loginId, MultipartFile file) {
+		
+//		Path path = Paths.get(FILE_UPLOAD_PATH);
+//		if (Files.exists(path)) {
+//			
+//			File directory = new File(FILE_UPLOAD_PATH);
+//			directory.mkdir();
+//		}
+		
+		
 		// 폴더(디렉토리) 생성
 		// 예: aaaa_1823478932/sun.png
 		String directoryName = loginId + "_" + System.currentTimeMillis();
