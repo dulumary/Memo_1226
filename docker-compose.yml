@@ -22,7 +22,7 @@ services:
     depends_on:
       - db
     volumes:
-      - upload_volumes:/home/ec2-user/memo/upload 
+      - upload_volumes:/home/ec2-user/memo/upload
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3308/memo_231226?characterEncoding=UTF-8
     networks:
